@@ -27,12 +27,9 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 5001,   uint256("0x2fac9021be0c311e7b6dc0933a72047c70f817e2eb1e01bede011193ad1b28bc") ) // hardfork
-        ( 10000,  uint256("0x0000000000827e4dc601f7310a91c45af8df0dfc1b6fa1dfa5b896cb00c8767c") ) // last pow block
-        ( 38425,  uint256("0x62bf2e9701226d2f88d9fa99d650bd81f3faf2e56f305b7d71ccd1e7aa9c3075") ) // hardfork
-        ( 254348, uint256("0x9bf8d9bd757d3ef23d5906d70567e5f0da93f1e0376588c8d421a95e2421838b") ) // minor network split
-        ( 319002, uint256("0x0011494d03b2cdf1ecfc8b0818f1e0ef7ee1d9e9b3d1279c10d35456bc3899ef") ) // hardfork
-        ( 872456, uint256("0xe4fd321ced1de06213d2e246b150b4bfd8c4aa0989965dce88f2a58668c64860") ) // hardfork
+        ( 0,   uint256("0x000075b86c9c0ac39d7f358bef2223f12abf648379d09d5633696180809c46e4") ) // genesis
+		( 50,   uint256("0xc2977b48944d1fa418b8c1f910e740af1b62467f05c35f7f54e10951462d184e") )
+		( 100,   uint256("0x910e3a95876ae37d6f16adb746821c49493e692789be61fbc8896e4d3944b236") )
     ;
 
     // TestNet has no checkpoints

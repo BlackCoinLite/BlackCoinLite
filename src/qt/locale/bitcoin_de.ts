@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BlackCoin</source>
-        <translation>Über BlackCoin</translation>
+        <source>About BlackCoinLite</source>
+        <translation>Über BlackCoinLite</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BlackCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;BlackCoin&lt;/b&gt; Version</translation>
+        <source>&lt;b&gt;BlackCoinLite&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;BlackCoinLite&lt;/b&gt; Version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The BlackCoin developers</source>
+Copyright © 2015 The BlackCoinLite developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -63,8 +63,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your BlackCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Das sind Ihre BlackCoin Adressen um Zahlungen zu erhalten. Sie werden vielleicht verschiedene an jeden Sender vergeben, damit Sie im Auge behalten können wer Sie bezahlt.</translation>
+        <source>These are your BlackCoinLite addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Das sind Ihre BlackCoinLite Adressen um Zahlungen zu erhalten. Sie werden vielleicht verschiedene an jeden Sender vergeben, damit Sie im Auge behalten können wer Sie bezahlt.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -78,8 +78,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a BlackCoin address</source>
-        <translation>Signieren Sie eine Nachricht um zu beweisen, dass Sie eine BlackCoin Adresse besitzen</translation>
+        <source>Sign a message to prove you own a BlackCoinLite address</source>
+        <translation>Signieren Sie eine Nachricht um zu beweisen, dass Sie eine BlackCoinLite Adresse besitzen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -93,8 +93,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified BlackCoin address</source>
-        <translation>Verifizieren Sie ob eine Nachricht einer bestimmten BlackCoin Adresse signiert wurde</translation>
+        <source>Verify a message to ensure it was signed with a specified BlackCoinLite address</source>
+        <translation>Verifizieren Sie ob eine Nachricht einer bestimmten BlackCoinLite Adresse signiert wurde</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -261,8 +261,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="+82"/>
-        <source>BlackCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>BlackCoin wird sich schließen um den Verschlüsselungsvorgang abzuschließen. Beachten Sie, dass die Verschlüsselung Ihrer Wallet keinen vollständigen Schutz vor Diebstahl Ihrer Coins duch auf Ihrem Computer installierte Malware gewährleistet</translation>
+        <source>BlackCoinLite will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>BlackCoinLite wird sich schließen um den Verschlüsselungsvorgang abzuschließen. Beachten Sie, dass die Verschlüsselung Ihrer Wallet keinen vollständigen Schutz vor Diebstahl Ihrer Coins duch auf Ihrem Computer installierte Malware gewährleistet</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -355,8 +355,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BlackCoin</source>
-        <translation>Informationen über BlackCoin anzeigen</translation>
+        <source>Show information about BlackCoinLite</source>
+        <translation>Informationen über BlackCoinLite anzeigen</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -395,13 +395,13 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a BlackCoin address</source>
-        <translation>Senden Sie Coins an eine BlackCoin Adresse</translation>
+        <source>Send coins to a BlackCoinLite address</source>
+        <translation>Senden Sie Coins an eine BlackCoinLite Adresse</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for BlackCoin</source>
-        <translation>Konfigurationsoptionen für BlackCoin ändern</translation>
+        <source>Modify configuration options for BlackCoinLite</source>
+        <translation>Konfigurationsoptionen für BlackCoinLite ändern</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -441,8 +441,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     <message>
         <location line="-214"/>
         <location line="+555"/>
-        <source>BlackCoin</source>
-        <translation>BlackCoin</translation>
+        <source>BlackCoinLite</source>
+        <translation>BlackCoinLite</translation>
     </message>
     <message>
         <location line="-555"/>
@@ -451,8 +451,8 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About BlackCoin</source>
-        <translation>&amp;Über BlackCoin</translation>
+        <source>&amp;About BlackCoinLite</source>
+        <translation>&amp;Über BlackCoinLite</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -503,13 +503,13 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>BlackCoin client</source>
-        <translation>BlackCoin Anwendung</translation>
+        <source>BlackCoinLite client</source>
+        <translation>BlackCoinLite Anwendung</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to BlackCoin network</source>
-        <translation><numerusform>%n aktive Verbindung zum BlackCoin Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum BlackCoin Netzwerk</numerusform></translation>
+        <source>%n active connection(s) to BlackCoinLite network</source>
+        <translation><numerusform>%n aktive Verbindung zum BlackCoinLite Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum BlackCoinLite Netzwerk</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -602,8 +602,8 @@ Adresse: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid BlackCoin address or malformed URI parameters.</source>
-        <translation>Die URI kann nicht erkannt werden! Die Ursache hierfür kann eine ungültige BlackCoin Adresse oder eine fehlerhafte Angabe der URI Parameter sein.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BlackCoinLite address or malformed URI parameters.</source>
+        <translation>Die URI kann nicht erkannt werden! Die Ursache hierfür kann eine ungültige BlackCoinLite Adresse oder eine fehlerhafte Angabe der URI Parameter sein.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -726,8 +726,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. BlackCoin can no longer continue safely and will quit.</source>
-        <translation>Ein fataler Fehler ist aufgetreten. BlackCoin kann nicht fortgesetzt werden und wird beendet.</translation>
+        <source>A fatal error occurred. BlackCoinLite can no longer continue safely and will quit.</source>
+        <translation>Ein fataler Fehler ist aufgetreten. BlackCoinLite kann nicht fortgesetzt werden und wird beendet.</translation>
     </message>
 </context>
 <context>
@@ -1046,8 +1046,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BlackCoin address.</source>
-        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige BlackCoin Adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BlackCoinLite address.</source>
+        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige BlackCoinLite Adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1065,8 +1065,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>BlackCoin-Qt</source>
-        <translation>BlackCoin-Qt
+        <source>BlackCoinLite-Qt</source>
+        <translation>BlackCoinLite-Qt
 </translation>
     </message>
     <message>
@@ -1139,13 +1139,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BlackCoin after logging in to the system.</source>
-        <translation>Automatisch BlackCoin starten beim Einloggen in das System.</translation>
+        <source>Automatically start BlackCoinLite after logging in to the system.</source>
+        <translation>Automatisch BlackCoinLite starten beim Einloggen in das System.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BlackCoin on system login</source>
-        <translation>&amp;Starte BlackCoin bei Systemstart</translation>
+        <source>&amp;Start BlackCoinLite on system login</source>
+        <translation>&amp;Starte BlackCoinLite bei Systemstart</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1154,8 +1154,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BlackCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisch den BlackCoin client port auf dem Router öffnen. Das funktioniert nur wenn der Router UPnP unterstützt und UPnP aktiviert ist.</translation>
+        <source>Automatically open the BlackCoinLite client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisch den BlackCoinLite client port auf dem Router öffnen. Das funktioniert nur wenn der Router UPnP unterstützt und UPnP aktiviert ist.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1184,7 +1184,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-57"/>
-        <source>Connect to the BlackCoin network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the BlackCoinLite network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1229,7 +1229,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BlackCoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting BlackCoinLite.</source>
         <translation>Die Sprache der GUI kann hier verändert werden. Die Einstellung wird nach einem Neustart übernommen.</translation>
     </message>
     <message>
@@ -1240,7 +1240,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von BlackCoins angezeigt werden soll.</translation>
+        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von BlackCoinLites angezeigt werden soll.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1265,7 +1265,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Use black visual theme (requires restart)</source>
-        <translation>Verwende das schwarze Blackcoin Wallet Design (Neustart erforderlich)</translation>
+        <translation>Verwende das schwarze BlackCoinLite Wallet Design (Neustart erforderlich)</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1296,7 +1296,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BlackCoin.</source>
+        <source>This setting will take effect after restarting BlackCoinLite.</source>
         <translation>Diese Einstellung wird nach einem Neustart übernommen.</translation>
     </message>
     <message>
@@ -1315,8 +1315,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BlackCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Die angezeigte Information kann falsch sein. Die Brieftasche synchronisiert automatisch mit dem BlackCoin Netzwerk nachdem eine Verbindung zustande gekommen ist, aber dieser Prozess ist nicht abgeschlossen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BlackCoinLite network after a connection is established, but this process has not completed yet.</source>
+        <translation>Die angezeigte Information kann falsch sein. Die Brieftasche synchronisiert automatisch mit dem BlackCoinLite Netzwerk nachdem eine Verbindung zustande gekommen ist, aber dieser Prozess ist nicht abgeschlossen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1389,7 +1389,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start blackcoin: click-to-pay handler</source>
+        <source>Cannot start blackcoinlite: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1557,7 +1557,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BlackCoin-Qt help message to get a list with possible BlackCoin command-line options.</source>
+        <source>Show the BlackCoinLite-Qt help message to get a list with possible BlackCoinLite command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1577,13 +1577,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>BlackCoin - Debug window</source>
-        <translation>BlackCoin - Debug Fenster</translation>
+        <source>BlackCoinLite - Debug window</source>
+        <translation>BlackCoinLite - Debug Fenster</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BlackCoin Core</source>
-        <translation>BlackCoin Kern</translation>
+        <source>BlackCoinLite Core</source>
+        <translation>BlackCoinLite Kern</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1592,8 +1592,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BlackCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Offne die Blackcoin Fehlerlogs aus dem Datenverzeichnis. Diese Funktion kann bei größeren Log-Files länger benötigen.</translation>
+        <source>Open the BlackCoinLite debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Offne die BlackCoinLite Fehlerlogs aus dem Datenverzeichnis. Diese Funktion kann bei größeren Log-Files länger benötigen.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1602,8 +1602,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the BlackCoin RPC console.</source>
-        <translation>Willkommen zur Blackcoin RPC Anwendung.</translation>
+        <source>Welcome to the BlackCoinLite RPC console.</source>
+        <translation>Willkommen zur BlackCoinLite RPC Anwendung.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1784,8 +1784,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Empfängeradresse (z.b. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1884,8 +1884,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid BlackCoin address</source>
-        <translation>Warnung: Ungültige BlackCoin Adresse</translation>
+        <source>WARNING: Invalid BlackCoinLite address</source>
+        <translation>Warnung: Ungültige BlackCoinLite Adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1917,7 +1917,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1958,8 +1958,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Empfängeradresse (z.b. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
 </context>
 <context>
@@ -1982,7 +1982,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to sign the message with (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2019,8 +2019,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BlackCoin address</source>
-        <translation>Signiere die Nachricht um zu beweisen das du Besitzer dieser BlackCoin Adresse bist.</translation>
+        <source>Sign the message to prove you own this BlackCoinLite address</source>
+        <translation>Signiere die Nachricht um zu beweisen das du Besitzer dieser BlackCoinLite Adresse bist.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2046,12 +2046,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address the message was signed with (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BlackCoin address</source>
+        <source>Verify the message to ensure it was signed with the specified BlackCoinLite address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2062,8 +2062,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Empfängeradresse (z.b. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2072,8 +2072,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BlackCoin signature</source>
-        <translation>BlackCoin Signatur eingeben</translation>
+        <source>Enter BlackCoinLite signature</source>
+        <translation>BlackCoinLite Signatur eingeben</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -2651,8 +2651,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
-        <source>BlackCoin version</source>
-        <translation>BlackCoin Version</translation>
+        <source>BlackCoinLite version</source>
+        <translation>BlackCoinLite Version</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2661,8 +2661,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or blackcoind</source>
-        <translation>Kommando versenden an -server oder blackcoind </translation>
+        <source>Send command to -server or blackcoinlited</source>
+        <translation>Kommando versenden an -server oder blackcoinlited </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2681,13 +2681,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: blackcoin.conf)</source>
-        <translation>Konfigurationsdatei angeben (Standard: blackcoin.conf)</translation>
+        <source>Specify configuration file (default: blackcoinlite.conf)</source>
+        <translation>Konfigurationsdatei angeben (Standard: blackcoinlite.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: blackcoind.pid)</source>
-        <translation>PID Datei angeben (Standard: blackcoin.pid)</translation>
+        <source>Specify pid file (default: blackcoinlited.pid)</source>
+        <translation>PID Datei angeben (Standard: blackcoinlite.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2704,13 +2704,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blackcoinrpc
+rpcuser=blackcoinliterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BlackCoinLite Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2726,8 +2726,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+5"/>
-        <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
-        <translation>Horche für verbindungen auf &lt;Port&gt; (Standard: 15714 oder Testnetz: 25714)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 25714 or testnet: 25714)</source>
+        <translation>Horche für verbindungen auf &lt;Port&gt; (Standard: 25714 oder Testnetz: 25714)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2776,8 +2776,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+62"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
-        <translation>Horche für eingehende JSON-RPC Verbindungen auf &lt;Port&gt;(Standard: 15715 or Testnetz: 25715)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 25715 or testnet: 25715)</source>
+        <translation>Horche für eingehende JSON-RPC Verbindungen auf &lt;Port&gt;(Standard: 25715 or Testnetz: 25715)</translation>
     </message>
     <message>
         <location line="-16"/>
@@ -2816,8 +2816,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BlackCoin will not work properly.</source>
-        <translation>Wanung : Bitte prüfen Sie ob Datum und Uhrzeit richtig eingestellt sind. Wenn das Datum falsch ist wird BlackCoin nicht richtig funktionieren.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BlackCoinLite will not work properly.</source>
+        <translation>Wanung : Bitte prüfen Sie ob Datum und Uhrzeit richtig eingestellt sind. Wenn das Datum falsch ist wird BlackCoinLite nicht richtig funktionieren.</translation>
     </message>
     <message>
         <location line="+130"/>
@@ -3111,7 +3111,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+8"/>
-        <source>Initialization sanity check failed. BlackCoin is shutting down.</source>
+        <source>Initialization sanity check failed. BlackCoinLite is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3166,13 +3166,13 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BlackCoin</source>
-        <translation>Fehler beim Laden wallet.dat. Brieftasche benötigt neuere Version der BlackCoin Brieftasche.</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BlackCoinLite</source>
+        <translation>Fehler beim Laden wallet.dat. Brieftasche benötigt neuere Version der BlackCoinLite Brieftasche.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart BlackCoin to complete</source>
-        <translation>Brieftasche muss neu geschrieben werden. Starte die BlackCoin Brieftasche neu zum komplettieren.</translation>
+        <source>Wallet needed to be rewritten: restart BlackCoinLite to complete</source>
+        <translation>Brieftasche muss neu geschrieben werden. Starte die BlackCoinLite Brieftasche neu zum komplettieren.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3231,7 +3231,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+124"/>
-        <source>Unable to bind to %s on this computer. BlackCoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. BlackCoinLite is probably already running.</source>
         <translation>Fehler beim anbinden %s auf diesem Computer. BlaclCoin Client läuft wahrscheinlich bereits.</translation>
     </message>
     <message>
@@ -3266,7 +3266,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BlackCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. BlackCoinLite is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

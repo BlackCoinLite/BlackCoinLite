@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=BlackCoin
-Comment=BlackCoin P2P Cryptocurrency
-Comment[fr]=BlackCoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=BlackCoin, eşten eşe kriptografik sanal para birimi
-Exec=/usr/bin/blackcoin-qt
+Name=BlackCoinLite
+Comment=BlackCoinLite P2P Cryptocurrency
+Comment[fr]=BlackCoinLite, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BlackCoinLite, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/blackcoinlite-qt
 Terminal=false
 Type=Application
 Icon=/usr/share/pixmaps/bitcoin80.xpm
-MimeType=x-scheme-handler/blackcoin;
+MimeType=x-scheme-handler/blackcoinlite;
 Categories=Office;

@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "BlackCoin cannot be compiled without assertions."
+# error "BlackCoinLite cannot be compiled without assertions."
 #endif
 
 //
@@ -39,14 +39,13 @@ CTxMemPool mempool;
 map<uint256, CBlockIndex*> mapBlockIndex;
 set<pair<COutPoint, unsigned int> > setStakeSeen;
 
-CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
-CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 48);
+CBigNum bnProofOfStakeLimit(~uint256(0) >> 16);
 
-int nStakeMinConfirmations = 500;
+int nStakeMinConfirmations = 10;
 unsigned int nStakeMinAge = 8 * 60 * 60; // 8 hours
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 500;
+int nCoinbaseMaturity = 10;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -77,7 +76,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BlackCoin Signed Message:\n";
+const string strMessageMagic = "BlackCoinLite Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -295,7 +294,7 @@ bool IsStandardTx(const CTransaction& tx, string& reason)
         return false;
     }
     // nTime has different purpose from nLockTime but can be used in similar attacks
-    if (tx.nTime > FutureDrift(GetAdjustedTime(), nBestHeight + 1)) {
+    if (tx.nTime > FutureDrift(GetAdjustedTime())) {
         reason = "time-too-new";
         return false;
     }
@@ -962,30 +961,40 @@ void static PruneOrphanBlocks()
 
 static CBigNum GetProofOfStakeLimit(int nHeight)
 {
-    if (IsProtocolV2(nHeight))
-        return bnProofOfStakeLimitV2;
-    else
-        return bnProofOfStakeLimit;
+    return bnProofOfStakeLimit;
 }
 
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 10000 * COIN;
+    int64_t nSubsidy = 0 * COIN;
 
+	//ICO Premine (3200000000)
+	if (pindexBest->nHeight+1 <= 100) 
+	{
+		nSubsidy = 32000000 * COIN;
+	}
+	
+	//TX fee for ICO transaction (0.00000500)
+	if (pindexBest->nHeight+1 == 101) 
+	{
+		nSubsidy = 500;
+	}
+	
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
 
-    return nSubsidy + nFees;
+    return nSubsidy;
 }
 
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
     int64_t nSubsidy;
-    if (IsProtocolV3(pindexPrev->nTime))
-        nSubsidy = COIN * 3 / 2;
-    else
-        nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+
+    nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+	
+	if (pindexBest->nHeight-1 % 100 == 0)
+		nSubsidy = nSubsidy * 2;
 
     LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d\n", FormatMoney(nSubsidy), nCoinAge);
 
@@ -1018,14 +1027,6 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
 
     int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
     int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
-    if (IsProtocolV1RetargetingFixed(pindexLast->nHeight)) {
-        if (nActualSpacing < 0)
-            nActualSpacing = nTargetSpacing;
-    }
-    if (IsProtocolV3(pindexLast->nTime)) {
-        if (nActualSpacing > nTargetSpacing * 10)
-            nActualSpacing = nTargetSpacing * 10;
-    }
 
     // ppcoin: target change every block
     // ppcoin: retarget with exponential moving toward target spacing
@@ -1289,12 +1290,6 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs, map<uint256, CTx
             if (txPrev.nTime > nTime)
                 return DoS(100, error("ConnectInputs() : transaction timestamp earlier than input transaction"));
 
-            if (IsProtocolV3(nTime))
-            {
-                if (txPrev.vout[prevout.n].IsEmpty())
-                    return DoS(1, error("ConnectInputs() : special marker is not spendable"));
-            }
-
             // Check for negative or overflow input values
             nValueIn += txPrev.vout[prevout.n].nValue;
             if (!MoneyRange(txPrev.vout[prevout.n].nValue) || !MoneyRange(nValueIn))
@@ -1366,12 +1361,12 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs, map<uint256, CTx
             if (nTxFee < 0)
                 return DoS(100, error("ConnectInputs() : %s nTxFee < 0", GetHash().ToString()));
 
-            if (!IsProtocolV3(nTime)) {
-                // enforce transaction fees for every block
-                int64_t nRequiredFee = GetMinFee(*this);
-                if (nTxFee < nRequiredFee)
-                    return fBlock? DoS(100, error("ConnectInputs() : %s not paying required fee=%s, paid=%s", GetHash().ToString(), FormatMoney(nRequiredFee), FormatMoney(nTxFee))) : false;
-            }
+            
+			// enforce transaction fees for every block
+			int64_t nRequiredFee = GetMinFee(*this);
+			if (nTxFee < nRequiredFee)
+				return fBlock? DoS(100, error("ConnectInputs() : %s not paying required fee=%s, paid=%s", GetHash().ToString(), FormatMoney(nRequiredFee), FormatMoney(nTxFee))) : false;
+            
 
             nFees += nTxFee;
             if (!MoneyRange(nFees))
@@ -1413,15 +1408,6 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         return false;
 
     unsigned int flags = SCRIPT_VERIFY_NOCACHE;
-
-    if (IsProtocolV3(nTime))
-    {
-        flags |= SCRIPT_VERIFY_NULLDUMMY |
-                 SCRIPT_VERIFY_STRICTENC |
-                 SCRIPT_VERIFY_ALLOW_EMPTY_SIG |
-                 SCRIPT_VERIFY_FIX_HASHTYPE |
-                 SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
-    }
 
     //// issue here: it doesn't know the version
     unsigned int nTxPos;
@@ -1826,25 +1812,13 @@ bool CTransaction::GetCoinAge(CTxDB& txdb, const CBlockIndex* pindexPrev, uint64
         if (nTime < txPrev.nTime)
             return false;  // Transaction timestamp violation
 
-        if (IsProtocolV3(nTime))
-        {
-            int nSpendDepth;
-            if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nSpendDepth))
-            {
-                LogPrint("coinage", "coin age skip nSpendDepth=%d\n", nSpendDepth + 1);
-                continue; // only count coins meeting min confirmations requirement
-            }
-        }
-        else
-        {
-            // Read block header
-            CBlock block;
-            if (!block.ReadFromDisk(txindex.pos.nFile, txindex.pos.nBlockPos, false))
-                return false; // unable to read block of previous transaction
-            if (block.GetBlockTime() + nStakeMinAge > nTime)
-                continue; // only count coins meeting min age requirement
-        }
-
+		// Read block header
+		CBlock block;
+		if (!block.ReadFromDisk(txindex.pos.nFile, txindex.pos.nBlockPos, false))
+			return false; // unable to read block of previous transaction
+		if (block.GetBlockTime() + nStakeMinAge > nTime)
+			continue; // only count coins meeting min age requirement
+        
         int64_t nValueIn = txPrev.vout[txin.prevout.n].nValue;
         bnCentSecond += CBigNum(nValueIn) * (nTime-txPrev.nTime) / CENT;
 
@@ -1943,7 +1917,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
         return DoS(50, error("CheckBlock() : proof of work failed"));
 
     // Check timestamp
-    if (GetBlockTime() > FutureDriftV2(GetAdjustedTime()))
+    if (GetBlockTime() > FutureDrift(GetAdjustedTime()))
         return error("CheckBlock() : block timestamp too far in the future");
 
     // First transaction must be coinbase, the rest must not be
@@ -2012,11 +1986,9 @@ bool CBlock::AcceptBlock()
 {
     AssertLockHeld(cs_main);
 
-    if (!IsProtocolV3(nTime)) {
-        if (nVersion > CURRENT_VERSION)
-            return DoS(100, error("AcceptBlock() : reject unknown block version %d", nVersion));
-    }
-
+	if (nVersion > CURRENT_VERSION)
+		return DoS(100, error("AcceptBlock() : reject unknown block version %d", nVersion));
+    
     // Check for duplicate
     uint256 hash = GetHash();
     if (mapBlockIndex.count(hash))
@@ -2029,16 +2001,11 @@ bool CBlock::AcceptBlock()
     CBlockIndex* pindexPrev = (*mi).second;
     int nHeight = pindexPrev->nHeight+1;
 
-    if (IsProtocolV2(nHeight) && nVersion < 7)
-        return DoS(100, error("AcceptBlock() : reject too old nVersion = %d", nVersion));
-    else if (!IsProtocolV2(nHeight) && nVersion > 6)
-        return DoS(100, error("AcceptBlock() : reject too new nVersion = %d", nVersion));
-
     if (IsProofOfWork() && nHeight > Params().LastPOWBlock())
         return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
 
     // Check coinbase timestamp
-    if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime, nHeight))
+    if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime))
         return DoS(50, error("AcceptBlock() : coinbase timestamp is too early"));
 
     // Check coinstake timestamp
@@ -2050,7 +2017,7 @@ bool CBlock::AcceptBlock()
         return DoS(100, error("AcceptBlock() : incorrect %s", IsProofOfWork() ? "proof-of-work" : "proof-of-stake"));
 
     // Check timestamp against prev
-    if (GetBlockTime() <= pindexPrev->GetPastTimeLimit() || FutureDrift(GetBlockTime(), nHeight) < pindexPrev->GetBlockTime())
+    if (GetBlockTime() <= pindexPrev->GetBlockTime() || FutureDrift(GetBlockTime()) < pindexPrev->GetBlockTime())
         return error("AcceptBlock() : block's timestamp is too early");
 
     // Check that all transactions are finalized
@@ -2300,17 +2267,15 @@ bool CBlock::SignBlock(CWallet& wallet, int64_t nFees)
 
     CKey key;
     CTransaction txCoinStake;
-    if (IsProtocolV2(nBestHeight+1))
-        txCoinStake.nTime &= ~STAKE_TIMESTAMP_MASK;
 
     int64_t nSearchTime = txCoinStake.nTime; // search to current time
 
     if (nSearchTime > nLastCoinStakeSearchTime)
     {
-        int64_t nSearchInterval = IsProtocolV2(nBestHeight+1) ? 1 : nSearchTime - nLastCoinStakeSearchTime;
+        int64_t nSearchInterval = nSearchTime - nLastCoinStakeSearchTime;
         if (wallet.CreateCoinStake(wallet, nBits, nSearchInterval, nFees, txCoinStake, key))
         {
-            if (txCoinStake.nTime >= pindexBest->GetPastTimeLimit()+1)
+            if (txCoinStake.nTime >= pindexBest->GetBlockTime()+1)
             {
                 // make sure coinstake would meet timestamp protocol
                 //    as it would be the same as the block timestamp
@@ -2356,26 +2321,6 @@ bool CBlock::CheckBlockSignature() const
     {
         valtype& vchPubKey = vSolutions[0];
         return CPubKey(vchPubKey).Verify(GetHash(), vchBlockSig);
-    }
-    else if (IsProtocolV3(nTime))
-    {
-        // Block signing key also can be encoded in the nonspendable output
-        // This allows to not pollute UTXO set with useless outputs e.g. in case of multisig staking
-
-        const CScript& script = txout.scriptPubKey;
-        CScript::const_iterator pc = script.begin();
-        opcodetype opcode;
-        valtype vchPushValue;
-
-        if (!script.GetOp(pc, opcode, vchPushValue))
-            return false;
-        if (opcode != OP_RETURN)
-            return false;
-        if (!script.GetOp(pc, opcode, vchPushValue))
-            return false;
-        if (!IsCompressedOrUncompressedPubKey(vchPushValue))
-            return false;
-        return CPubKey(vchPushValue).Verify(GetHash(), vchBlockSig);
     }
 
     return false;
@@ -2635,7 +2580,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("blackcoin-loadblk");
+    RenameThread("blackcoinlite-loadblk");
 
     CImportingNow imp;
 

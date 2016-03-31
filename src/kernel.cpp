@@ -1,5 +1,5 @@
 // Copyright (c) 2012-2013 The PPCoin developers
-// Copyright (c) 2014 The BlackCoin developers
+// Copyright (c) 2015 The BlackCoinLite developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -236,28 +236,29 @@ static bool GetKernelStakeModifier(uint256 hashBlockFrom, uint64_t& nStakeModifi
     return true;
 }
 
-// ppcoin kernel protocol
+// BlackCoinLite kernel protocol
 // coinstake must meet hash target according to the protocol:
 // kernel (input 0) must meet the formula
-//     hash(nStakeModifier + txPrev.block.nTime + txPrev.offset + txPrev.nTime + txPrev.vout.n + nTime) < bnTarget * nCoinDayWeight
+//     hash(nStakeModifier + txPrev.block.nTime + txPrev.nTime + txPrev.vout.hash + txPrev.vout.n + nTime) < bnTarget * nWeight
 // this ensures that the chance of getting a coinstake is proportional to the
-// amount of coin age one owns.
+// amount of coins one owns.
 // The reason this hash is chosen is the following:
 //   nStakeModifier: scrambles computation to make it very difficult to precompute
-//                  future proof-of-stake at the time of the coin's confirmation
+//                   future proof-of-stake
 //   txPrev.block.nTime: prevent nodes from guessing a good timestamp to
-//                       generate transaction for future advantage
-//   txPrev.offset: offset of txPrev inside block, to reduce the chance of 
-//                  nodes generating coinstake at the same time
-//   txPrev.nTime: reduce the chance of nodes generating coinstake at the same
-//                 time
+//                       generate transaction for future advantage,
+//                       obsolete since v3
+//   txPrev.nTime: slightly scrambles computation
+//   txPrev.vout.hash: hash of txPrev, to reduce the chance of nodes
+//                     generating coinstake at the same time
 //   txPrev.vout.n: output number of txPrev, to reduce the chance of nodes
 //                  generating coinstake at the same time
+//   nTime: current timestamp
 //   block/tx hash should not be used here as they can be generated in vast
 //   quantities so as to generate blocks faster, degrading the system back into
 //   a proof-of-work situation.
 //
-static bool CheckStakeKernelHashV1(unsigned int nBits, const CBlock& blockFrom, unsigned int nTxPrevOffset, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, uint256& hashProofOfStake, uint256& targetProofOfStake, bool fPrintProofOfStake)
+bool CheckStakeKernelHash(CBlockIndex* pindexPrev, unsigned int nBits, const CBlock& blockFrom, unsigned int nTxPrevOffset, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, uint256& hashProofOfStake, uint256& targetProofOfStake, bool fPrintProofOfStake)
 {
     if (nTimeTx < txPrev.nTime)  // Transaction timestamp violation
         return error("CheckStakeKernelHash() : nTime violation");
@@ -316,97 +317,6 @@ static bool CheckStakeKernelHashV1(unsigned int nBits, const CBlock& blockFrom, 
     return true;
 }
 
-// BlackCoin kernel protocol
-// coinstake must meet hash target according to the protocol:
-// kernel (input 0) must meet the formula
-//     hash(nStakeModifier + txPrev.block.nTime + txPrev.nTime + txPrev.vout.hash + txPrev.vout.n + nTime) < bnTarget * nWeight
-// this ensures that the chance of getting a coinstake is proportional to the
-// amount of coins one owns.
-// The reason this hash is chosen is the following:
-//   nStakeModifier: scrambles computation to make it very difficult to precompute
-//                   future proof-of-stake
-//   txPrev.block.nTime: prevent nodes from guessing a good timestamp to
-//                       generate transaction for future advantage,
-//                       obsolete since v3
-//   txPrev.nTime: slightly scrambles computation
-//   txPrev.vout.hash: hash of txPrev, to reduce the chance of nodes
-//                     generating coinstake at the same time
-//   txPrev.vout.n: output number of txPrev, to reduce the chance of nodes
-//                  generating coinstake at the same time
-//   nTime: current timestamp
-//   block/tx hash should not be used here as they can be generated in vast
-//   quantities so as to generate blocks faster, degrading the system back into
-//   a proof-of-work situation.
-//
-static bool CheckStakeKernelHashV2(CBlockIndex* pindexPrev, unsigned int nBits, unsigned int nTimeBlockFrom, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, uint256& hashProofOfStake, uint256& targetProofOfStake, bool fPrintProofOfStake)
-{
-    if (nTimeTx < txPrev.nTime)  // Transaction timestamp violation
-        return error("CheckStakeKernelHash() : nTime violation");
-
-    // Base target
-    CBigNum bnTarget;
-    bnTarget.SetCompact(nBits);
-
-    // Weighted target
-    int64_t nValueIn = txPrev.vout[prevout.n].nValue;
-    CBigNum bnWeight = CBigNum(nValueIn);
-    bnTarget *= bnWeight;
-
-    targetProofOfStake = bnTarget.getuint256();
-
-    uint64_t nStakeModifier = pindexPrev->nStakeModifier;
-    uint256 bnStakeModifierV2 = pindexPrev->bnStakeModifierV2;
-    int nStakeModifierHeight = pindexPrev->nHeight;
-    int64_t nStakeModifierTime = pindexPrev->nTime;
-
-    // Calculate hash
-    CDataStream ss(SER_GETHASH, 0);
-    if (IsProtocolV3(nTimeTx))
-        ss << bnStakeModifierV2;
-    else
-        ss << nStakeModifier << nTimeBlockFrom;
-    ss << txPrev.nTime << prevout.hash << prevout.n << nTimeTx;
-    hashProofOfStake = Hash(ss.begin(), ss.end());
-
-    if (fPrintProofOfStake)
-    {
-        LogPrintf("CheckStakeKernelHash() : using modifier 0x%016x at height=%d timestamp=%s for block from timestamp=%s\n",
-            nStakeModifier, nStakeModifierHeight,
-            DateTimeStrFormat(nStakeModifierTime),
-            DateTimeStrFormat(nTimeBlockFrom));
-        LogPrintf("CheckStakeKernelHash() : check modifier=0x%016x nTimeBlockFrom=%u nTimeTxPrev=%u nPrevout=%u nTimeTx=%u hashProof=%s\n",
-            nStakeModifier,
-            nTimeBlockFrom, txPrev.nTime, prevout.n, nTimeTx,
-            hashProofOfStake.ToString());
-    }
-
-    // Now check if proof-of-stake hash meets target protocol
-    if (CBigNum(hashProofOfStake) > bnTarget)
-        return false;
-
-    if (fDebug && !fPrintProofOfStake)
-    {
-        LogPrintf("CheckStakeKernelHash() : using modifier 0x%016x at height=%d timestamp=%s for block from timestamp=%s\n",
-            nStakeModifier, nStakeModifierHeight,
-            DateTimeStrFormat(nStakeModifierTime),
-            DateTimeStrFormat(nTimeBlockFrom));
-        LogPrintf("CheckStakeKernelHash() : pass modifier=0x%016x nTimeBlockFrom=%u nTimeTxPrev=%u nPrevout=%u nTimeTx=%u hashProof=%s\n",
-            nStakeModifier,
-            nTimeBlockFrom, txPrev.nTime, prevout.n, nTimeTx,
-            hashProofOfStake.ToString());
-    }
-
-    return true;
-}
-
-bool CheckStakeKernelHash(CBlockIndex* pindexPrev, unsigned int nBits, const CBlock& blockFrom, unsigned int nTxPrevOffset, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, uint256& hashProofOfStake, uint256& targetProofOfStake, bool fPrintProofOfStake)
-{
-    if (IsProtocolV2(pindexPrev->nHeight+1))
-        return CheckStakeKernelHashV2(pindexPrev, nBits, blockFrom.GetBlockTime(), txPrev, prevout, nTimeTx, hashProofOfStake, targetProofOfStake, fPrintProofOfStake);
-    else
-        return CheckStakeKernelHashV1(nBits, blockFrom, nTxPrevOffset, txPrev, prevout, nTimeTx, hashProofOfStake, targetProofOfStake, fPrintProofOfStake);
-}
-
 // Check kernel hash target and coinstake signature
 bool CheckProofOfStake(CBlockIndex* pindexPrev, const CTransaction& tx, unsigned int nBits, uint256& hashProofOfStake, uint256& targetProofOfStake)
 {
@@ -433,18 +343,9 @@ bool CheckProofOfStake(CBlockIndex* pindexPrev, const CTransaction& tx, unsigned
         return fDebug? error("CheckProofOfStake() : read block failed") : false; // unable to read block of previous transaction
 
     // Min age requirement
-    if (IsProtocolV3(tx.nTime))
-    {
-        int nDepth;
-        if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nDepth))
-            return tx.DoS(100, error("CheckProofOfStake() : tried to stake at depth %d", nDepth + 1));
-    }
-    else
-    {
-        unsigned int nTimeBlockFrom = block.GetBlockTime();
-        if (nTimeBlockFrom + nStakeMinAge > tx.nTime)
-            return error("CheckProofOfStake() : min age violation");
-    }
+	unsigned int nTimeBlockFrom = block.GetBlockTime();
+	if (nTimeBlockFrom + nStakeMinAge > tx.nTime)
+		return error("CheckProofOfStake() : min age violation");
 
     if (!CheckStakeKernelHash(pindexPrev, nBits, block, txindex.pos.nTxPos - txindex.pos.nBlockPos, txPrev, txin.prevout, tx.nTime, hashProofOfStake, targetProofOfStake, fDebug))
         return tx.DoS(1, error("CheckProofOfStake() : INFO: check kernel failed on coinstake %s, hashProof=%s", tx.GetHash().ToString(), hashProofOfStake.ToString())); // may occur during initial download or if behind on block chain sync
@@ -455,10 +356,7 @@ bool CheckProofOfStake(CBlockIndex* pindexPrev, const CTransaction& tx, unsigned
 // Check whether the coinstake timestamp meets protocol
 bool CheckCoinStakeTimestamp(int nHeight, int64_t nTimeBlock, int64_t nTimeTx)
 {
-    if (IsProtocolV2(nHeight))
-        return (nTimeBlock == nTimeTx) && ((nTimeTx & STAKE_TIMESTAMP_MASK) == 0);
-    else
-        return (nTimeBlock == nTimeTx);
+    return (nTimeBlock == nTimeTx);
 }
 
 bool CheckKernel(CBlockIndex* pindexPrev, unsigned int nBits, int64_t nTime, const COutPoint& prevout, int64_t* pBlockTime)
@@ -476,18 +374,9 @@ bool CheckKernel(CBlockIndex* pindexPrev, unsigned int nBits, int64_t nTime, con
     if (!block.ReadFromDisk(txindex.pos.nFile, txindex.pos.nBlockPos, false))
         return false;
 
-    if (IsProtocolV3(nTime))
-    {
-        int nDepth;
-        if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nDepth))
-            return false;
-    }
-    else
-    {
-        if (block.GetBlockTime() + nStakeMinAge > nTime)
-            return false; // only count coins meeting min age requirement
-    }
-
+	if (block.GetBlockTime() + nStakeMinAge > nTime)
+		return false; // only count coins meeting min age requirement
+    
     if (pBlockTime)
         *pBlockTime = block.GetBlockTime();
 

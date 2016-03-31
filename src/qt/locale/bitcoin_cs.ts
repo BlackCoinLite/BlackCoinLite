@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BlackCoin</source>
-        <translation>O BlackCoinu</translation>
+        <source>About BlackCoinLite</source>
+        <translation>O BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BlackCoin&lt;/b&gt; version</source>
-        <translation>Verze &lt;b&gt;BlackCoinu&lt;/b&gt; </translation>
+        <source>&lt;b&gt;BlackCoinLite&lt;/b&gt; version</source>
+        <translation>Verze &lt;b&gt;BlackCoinLiteu&lt;/b&gt; </translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The BlackCoin developers</source>
+Copyright © 2015 The BlackCoinLite developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The BlackCoin developers</translation>
+Copyright © 2015 The BlackCoinLite developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your BlackCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tato jsou tvé BlackCoin adresy pro příjem plateb. Každému odesílateli můžeš dát jinou adresu, aby jsi mohl sledovat, kdo ti platí.</translation>
+        <source>These are your BlackCoinLite addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Tato jsou tvé BlackCoinLite adresy pro příjem plateb. Každému odesílateli můžeš dát jinou adresu, aby jsi mohl sledovat, kdo ti platí.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a BlackCoin address</source>
-        <translation>Podepiš zprávu, aby jsi dokázal, že vlastníš tuto BlackCoin adresu.</translation>
+        <source>Sign a message to prove you own a BlackCoinLite address</source>
+        <translation>Podepiš zprávu, aby jsi dokázal, že vlastníš tuto BlackCoinLite adresu.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified BlackCoin address</source>
-        <translation>Ověř zprávu, aby jsi zajistil, že byla podepsaná určitou BlackCoin adresou.</translation>
+        <source>Verify a message to ensure it was signed with a specified BlackCoinLite address</source>
+        <translation>Ověř zprávu, aby jsi zajistil, že byla podepsaná určitou BlackCoinLite adresou.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>BlackCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Pro dokončení procesu šifrování se BlackCoin nyní zavře, Pamatuj, že zašifrování tvé peněženky nemůže plně ochránit tvé mince před krádeží, pokud máš počítač infikován malwerem.</translation>
+        <source>BlackCoinLite will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Pro dokončení procesu šifrování se BlackCoinLite nyní zavře, Pamatuj, že zašifrování tvé peněženky nemůže plně ochránit tvé mince před krádeží, pokud máš počítač infikován malwerem.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BlackCoin</source>
-        <translation>Zobraz informace a BlackCoinu</translation>
+        <source>Show information about BlackCoinLite</source>
+        <translation>Zobraz informace a BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a BlackCoin address</source>
-        <translation>Odešli mince na BlackCoin adresu</translation>
+        <source>Send coins to a BlackCoinLite address</source>
+        <translation>Odešli mince na BlackCoinLite adresu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for BlackCoin</source>
-        <translation>Uprav možnosti konfigurace pro BlackCoin</translation>
+        <source>Modify configuration options for BlackCoinLite</source>
+        <translation>Uprav možnosti konfigurace pro BlackCoinLite</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+555"/>
-        <source>BlackCoin</source>
-        <translation>BlackCoin</translation>
+        <source>BlackCoinLite</source>
+        <translation>BlackCoinLite</translation>
     </message>
     <message>
         <location line="-555"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About BlackCoin</source>
-        <translation>&amp;O BlackCoinu</translation>
+        <source>&amp;About BlackCoinLite</source>
+        <translation>&amp;O BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>BlackCoin client</source>
-        <translation>BlackCoin klient</translation>
+        <source>BlackCoinLite client</source>
+        <translation>BlackCoinLite klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to BlackCoin network</source>
-        <translation><numerusform>%n aktivní spojení do BlackCoin sítě</numerusform><numerusform>%n aktivních spojení do BlackCoin sítě</numerusform><numerusform>%n aktivních spojení do BlackCoin sítě</numerusform></translation>
+        <source>%n active connection(s) to BlackCoinLite network</source>
+        <translation><numerusform>%n aktivní spojení do BlackCoinLite sítě</numerusform><numerusform>%n aktivních spojení do BlackCoinLite sítě</numerusform><numerusform>%n aktivních spojení do BlackCoinLite sítě</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adresa: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid BlackCoin address or malformed URI parameters.</source>
-        <translation>URI nejde rozparsovat! To může být způsobeno neplatnou BlackCoin adresou nebo chybnými URI parametry.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BlackCoinLite address or malformed URI parameters.</source>
+        <translation>URI nejde rozparsovat! To může být způsobeno neplatnou BlackCoinLite adresou nebo chybnými URI parametry.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. BlackCoin can no longer continue safely and will quit.</source>
-        <translation>Došlo k závažné chybě. BlackCoin již nemůže dále bezpečně pokračovat a bude ukončen.</translation>
+        <source>A fatal error occurred. BlackCoinLite can no longer continue safely and will quit.</source>
+        <translation>Došlo k závažné chybě. BlackCoinLite již nemůže dále bezpečně pokračovat a bude ukončen.</translation>
     </message>
 </context>
 <context>
@@ -1057,8 +1057,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BlackCoin address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; není platná BlackCoin adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BlackCoinLite address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; není platná BlackCoinLite adresa.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>BlackCoin-Qt</source>
-        <translation>BlackCoin-Qt</translation>
+        <source>BlackCoinLite-Qt</source>
+        <translation>BlackCoinLite-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BlackCoin after logging in to the system.</source>
-        <translation>Automaticky spustit BlackCoin po přihlášení do systému.</translation>
+        <source>Automatically start BlackCoinLite after logging in to the system.</source>
+        <translation>Automaticky spustit BlackCoinLite po přihlášení do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BlackCoin on system login</source>
-        <translation>&amp;Spustit BlackCoin při přihlášení do systému</translation>
+        <source>&amp;Start BlackCoinLite on system login</source>
+        <translation>&amp;Spustit BlackCoinLite při přihlášení do systému</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BlackCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otevřít port BlackCoin klienta na routeru. Funguje to jen tehdy, když router podporuje UPnP a je povoleno.</translation>
+        <source>Automatically open the BlackCoinLite client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otevřít port BlackCoinLite klienta na routeru. Funguje to jen tehdy, když router podporuje UPnP a je povoleno.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1194,7 +1194,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="-57"/>
-        <source>Connect to the BlackCoin network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the BlackCoinLite network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1239,8 +1239,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BlackCoin.</source>
-        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu BlackCoinu.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BlackCoinLite.</source>
+        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu BlackCoinLiteu.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1306,8 +1306,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BlackCoin.</source>
-        <translation>Nastavení se projeví až po restartu BlackCoinu.</translation>
+        <source>This setting will take effect after restarting BlackCoinLite.</source>
+        <translation>Nastavení se projeví až po restartu BlackCoinLiteu.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1325,8 +1325,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BlackCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace můžou být zastaralé. Tvá peněženka se automaticky synchronizuje s BlackCoin sítí po navázaní spojení, ale tento proces ještě není dokončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BlackCoinLite network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace můžou být zastaralé. Tvá peněženka se automaticky synchronizuje s BlackCoinLite sítí po navázaní spojení, ale tento proces ještě není dokončený.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1399,7 +1399,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start blackcoin: click-to-pay handler</source>
+        <source>Cannot start blackcoinlite: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1567,8 +1567,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BlackCoin-Qt help message to get a list with possible BlackCoin command-line options.</source>
-        <translation>Zobrazit BlackCoin-Qt nápovědu pro zobrazení seznam dostupným možností příkazového řádku.</translation>
+        <source>Show the BlackCoinLite-Qt help message to get a list with possible BlackCoinLite command-line options.</source>
+        <translation>Zobrazit BlackCoinLite-Qt nápovědu pro zobrazení seznam dostupným možností příkazového řádku.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1587,13 +1587,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>BlackCoin - Debug window</source>
-        <translation>BlackCoin - Ladící okno</translation>
+        <source>BlackCoinLite - Debug window</source>
+        <translation>BlackCoinLite - Ladící okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BlackCoin Core</source>
-        <translation>Jádro BlackCoinu</translation>
+        <source>BlackCoinLite Core</source>
+        <translation>Jádro BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1602,8 +1602,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BlackCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři logovací soubor BlackCoinu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
+        <source>Open the BlackCoinLite debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otevři logovací soubor BlackCoinLiteu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1612,8 +1612,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the BlackCoin RPC console.</source>
-        <translation>Vítej v BlackCoin RPC konzoli.</translation>
+        <source>Welcome to the BlackCoinLite RPC console.</source>
+        <translation>Vítej v BlackCoinLite RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1793,8 +1793,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Napiš BlackCoin adresu (např. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Napiš BlackCoinLite adresu (např. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1893,8 +1893,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid BlackCoin address</source>
-        <translation>UPOZORNĚNÍ: Neplatná BlackCoin adresa</translation>
+        <source>WARNING: Invalid BlackCoinLite address</source>
+        <translation>UPOZORNĚNÍ: Neplatná BlackCoinLite adresa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1926,7 +1926,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1967,8 +1967,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadej BlackCoin adresu (např. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Zadej BlackCoinLite adresu (např. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
 </context>
 <context>
@@ -1991,8 +1991,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adresa pro podepsání zprávy (např. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Adresa pro podepsání zprávy (např. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2028,8 +2028,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BlackCoin address</source>
-        <translation>Podepiš zprávu jako důkaz, že vlastníš tuto BlackCoin adresu</translation>
+        <source>Sign the message to prove you own this BlackCoinLite address</source>
+        <translation>Podepiš zprávu jako důkaz, že vlastníš tuto BlackCoinLite adresu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2055,13 +2055,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adresa kterou byla zpráva podepsána (např. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Adresa kterou byla zpráva podepsána (např. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BlackCoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou BlackCoin adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified BlackCoinLite address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou BlackCoinLite adresou</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2071,8 +2071,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Zadej BlackCoin adresu (např. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a BlackCoinLite address (e.g. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</source>
+        <translation>Zadej BlackCoinLite adresu (např. bYNWXq4ftUKSq9ziC6dKYRb13GRPLschCz)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2081,8 +2081,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BlackCoin signature</source>
-        <translation>Zadej BlackCoin podpis</translation>
+        <source>Enter BlackCoinLite signature</source>
+        <translation>Zadej BlackCoinLite podpis</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -2660,8 +2660,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
-        <source>BlackCoin version</source>
-        <translation>Verze BlackCoinu</translation>
+        <source>BlackCoinLite version</source>
+        <translation>Verze BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2670,8 +2670,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or blackcoind</source>
-        <translation>Pošli příkaz na -server nebo blackcoind</translation>
+        <source>Send command to -server or blackcoinlited</source>
+        <translation>Pošli příkaz na -server nebo blackcoinlited</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2690,13 +2690,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: blackcoin.conf)</source>
-        <translation>Urči konfigurační soubor (výchozí: blackcoin.conf)</translation>
+        <source>Specify configuration file (default: blackcoinlite.conf)</source>
+        <translation>Urči konfigurační soubor (výchozí: blackcoinlite.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: blackcoind.pid)</source>
-        <translation>Urči pid soubor (výchozí: blackcoind.pid)</translation>
+        <source>Specify pid file (default: blackcoinlited.pid)</source>
+        <translation>Urči pid soubor (výchozí: blackcoinlited.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2713,13 +2713,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=blackcoinrpc
+rpcuser=blackcoinliterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BlackCoinLite Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2735,8 +2735,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+5"/>
-        <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
-        <translation>Naslouchej připojením na &lt;port&gt; (výchozí: 15714 nebo testovací síť: 25714)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 25714 or testnet: 25714)</source>
+        <translation>Naslouchej připojením na &lt;port&gt; (výchozí: 25714 nebo testovací síť: 25714)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2785,8 +2785,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+62"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
-        <translation>Naslouchej JSON-RPC připojením na &lt;port&gt; (výchozí: 15715 nebo testovací síť: 25715)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 25715 or testnet: 25715)</source>
+        <translation>Naslouchej JSON-RPC připojením na &lt;port&gt; (výchozí: 25715 nebo testovací síť: 25715)</translation>
     </message>
     <message>
         <location line="-16"/>
@@ -2825,8 +2825,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BlackCoin will not work properly.</source>
-        <translation>Upozornění: Zkontroluj prosím datum a čas tvého počítače! Pokud jdou tvé hodiny špatně, tak BlackCoin nebude pracovat správně. </translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BlackCoinLite will not work properly.</source>
+        <translation>Upozornění: Zkontroluj prosím datum a čas tvého počítače! Pokud jdou tvé hodiny špatně, tak BlackCoinLite nebude pracovat správně. </translation>
     </message>
     <message>
         <location line="+130"/>
@@ -3120,7 +3120,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+8"/>
-        <source>Initialization sanity check failed. BlackCoin is shutting down.</source>
+        <source>Initialization sanity check failed. BlackCoinLite is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3175,13 +3175,13 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BlackCoin</source>
-        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi BlackCoinu</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BlackCoinLite</source>
+        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi BlackCoinLiteu</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart BlackCoin to complete</source>
-        <translation>Peněženka by potřebovala být přepsána: restartuj BlackCoin pro dokončení</translation>
+        <source>Wallet needed to be rewritten: restart BlackCoinLite to complete</source>
+        <translation>Peněženka by potřebovala být přepsána: restartuj BlackCoinLite pro dokončení</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3240,8 +3240,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+124"/>
-        <source>Unable to bind to %s on this computer. BlackCoin is probably already running.</source>
-        <translation>Nemůžu se svázat s %s na tomto počítači. BlackCoin nejspíše již běží.</translation>
+        <source>Unable to bind to %s on this computer. BlackCoinLite is probably already running.</source>
+        <translation>Nemůžu se svázat s %s na tomto počítači. BlackCoinLite nejspíše již běží.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3275,7 +3275,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BlackCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. BlackCoinLite is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
